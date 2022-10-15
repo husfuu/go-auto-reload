@@ -3,15 +3,16 @@ package service
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/husfuu/go-auto-reload/helper"
 	"io/ioutil"
+
+	"github.com/husfuu/go-auto-reload/helper"
 )
 
 func UpdateJSON(disaster helper.Disaster) {
 	/*
 		update (write) the JSON file
 	*/
-	const FilePath = "../data/data.json"
+	const FilePath = "./data/data.json"
 
 	disaster.Status.Water = helper.RandomNumber(1, 100)
 	disaster.Status.Wind = helper.RandomNumber(1, 100)
